@@ -48,7 +48,7 @@ const Physics = ({ children }: PhysicsProps) => {
     const numSteps = deltaTime > 1.0 / 55.0 ? 2 : 1;
 
     // Step the physics world
-    joltInterface.Step(deltaTime, numSteps, 1);
+    joltInterface.Step(deltaTime, numSteps);
 
     // Update body transforms
     for (const [, { three, body }] of bodies) {
